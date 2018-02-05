@@ -79,17 +79,30 @@ function bouncing() {
   if (y > 575) {
     speedY = -speedY;
   }
-  if (x < 25 && y > n && y < n+60) {
-    speedX = abs(speedX);
-    speedX = speedX+0.5;
-    speedY = random(-10, 10);
+  if(x>15){
+   if (x < 25 && y > n && y < n+30) {
+     speedX = abs(speedX);
+     speedX = speedX+0.5;
+     speedY = random(-7, -1);
   }
-  if (x > 960 && y > m && y < m+60) {
-    speedX = -speedX;
-    speedX = speedX-0.5;
-    speedY = random(-10, 10);
+   if (x < 25 && y > n+30 && y < n+60) {
+     speedX = abs(speedX);
+     speedX = speedX+0.5;
+     speedY = random(1, 7);
   }
-
+}
+  if(x<985){
+   if (x > 960 && y > m && y < m+30) {
+     speedX = -speedX;
+     speedX = speedX-0.5;
+     speedY = random(-7, -1);
+  }
+  if (x > 960 && y > m+30 && y < m+60) {
+     speedX = -speedX;
+     speedX = speedX-0.5;
+     speedY = random(1, 7);
+  }
+}
   //scores
   if (x < -75) {
     s2 = s2+1;

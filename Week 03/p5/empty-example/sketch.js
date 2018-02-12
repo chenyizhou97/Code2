@@ -216,7 +216,7 @@ function studentColliders() {
   var balls;
 
   this.pos = createVector(width/2, height/2);
-  this.speed = 7;
+  this.speed = 0;
   this.angle = random(TWO_PI);
   this.vel = createVector(cos(this.angle) * this.speed, sin(this.angle) * this.speed);
   this.size = 15;
@@ -230,13 +230,10 @@ function studentColliders() {
     fill(255,30);
     rectMode(CENTER);
     rect(width/2,height/2,100,200);
-    noStroke();
-    fill(255);
-    rectMode(CENTER);
-    rect(this.pos.x, this.pos.y, this.size, this.size);
+    
 
    
-      for (var i = 0; i < 600,this.pos.x=400 && this.pos.y>150&&this.pos.y<35; i++) {
+      for (var i = 0; i < ball.lengh; i++) {
        balls[i].update();
        balls[i].display();
 
@@ -247,7 +244,7 @@ function studentColliders() {
   this.collided = function(other) {
     // do something cool here! do something to yourself,
     // and also something to the other thing?
-    balls = new Ball();
+    this.balls = new Ball();
   }
 }
 

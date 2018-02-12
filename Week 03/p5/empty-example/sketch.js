@@ -230,10 +230,14 @@ function studentColliders() {
     fill(255,30);
     rectMode(CENTER);
     rect(width/2,height/2,100,200);
+    noStroke();
+    fill(255);
+    rectMode(CENTER);
+    rect(this.pos.x, this.pos.y, this.size, this.size);
     
 
    
-      for (var i = 0; i < ball.lengh; i++) {
+      for (var i = 0; i < ball.length; i++) {
        balls[i].update();
        balls[i].display();
 

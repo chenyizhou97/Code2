@@ -338,11 +338,13 @@ function checkTransition(whichScene) {
          currentState++;
         setUpScene(currentState);
        }
+       break;
     case sceneState.LEVEL2:
       if (p1Score+p2Score>8) {
          currentState++;
         setUpScene(currentState);
       }
+      break;
     case sceneState.LEVEL3:
       if (abs(p1Score-p2Score)>10) {
         currentState = sceneState.WIN;
@@ -352,6 +354,7 @@ function checkTransition(whichScene) {
          currentState++;
         setUpScene(currentState);
       }
+      break;
     case sceneState.LEVEL4:
       if (abs(p1Score-p2Score)>10) {
         currentState = sceneState.WIN;
@@ -361,6 +364,7 @@ function checkTransition(whichScene) {
          currentState++;
         setUpScene(currentState);
       }
+      break;
     case sceneState.LEVEL5:
       if (abs(p1Score-p2Score)>10) {
         currentState = sceneState.WIN;
@@ -370,6 +374,7 @@ function checkTransition(whichScene) {
          currentState++;
         setUpScene(currentState);
       }
+      break;
     case sceneState.LEVEL6:
       if (abs(p1Score-p2Score)>10) {
         currentState = sceneState.WIN;
@@ -379,6 +384,7 @@ function checkTransition(whichScene) {
          currentState++;
         setUpScene(currentState);
       }
+      break;
     case sceneState.LEVEL7:
       if (abs(p1Score-p2Score)>10) {
         currentState = sceneState.WIN;
@@ -388,6 +394,7 @@ function checkTransition(whichScene) {
          currentState++;
         setUpScene(currentState);
       }
+      break;
     case sceneState.LEVEL8:
       if (abs(p1Score-p2Score)>10) {
         currentState = sceneState.WIN;
@@ -397,6 +404,7 @@ function checkTransition(whichScene) {
          currentState++;
         setUpScene(currentState);
       }
+      break;
     case sceneState.LEVEL9:
       if (abs(p1Score-p2Score)>10) {
         currentState = sceneState.WIN;
@@ -406,6 +414,7 @@ function checkTransition(whichScene) {
          currentState++;
         setUpScene(currentState);
       }
+      break;
     case sceneState.LEVEL10:
       if (abs(p1Score-p2Score)>10) {
         currentState = sceneState.WIN;

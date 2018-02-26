@@ -301,7 +301,6 @@ function drawScene(whichScene) {
     case sceneState.LEVEL10:
        colliders.push(new Cat());
        break;
-      break;
     case sceneState.WIN:
       drawField();
       if(p1Score>p2Score){

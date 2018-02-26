@@ -33,9 +33,6 @@ function Bryan() {
       this.height = 0;
     }
 
-    if (!hitColliderSFX.isPlaying()) {
-      hitColliderSFX.play();
-    }
   }
 }
 

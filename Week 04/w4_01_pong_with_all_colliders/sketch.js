@@ -10,7 +10,7 @@ var margin = 20;
 var cnv;
 var paddleBounceSFX, hitColliderSFX;
 var colliders = [];
-var currentState = sceneState.INTRO;
+
 var sceneState = {
   INTRO: 0,
   LEVEL1: 1,
@@ -25,6 +25,7 @@ var sceneState = {
   WIN: 11,
 };
 var keyOn = false;
+var currentState = sceneState.INTRO;
 
 // function preload() {
 
@@ -220,7 +221,7 @@ function Paddle(num) {
     other.speed += 1;
     other.vel.x = cos(angle) * other.speed;
     other.vel.y = sin(angle) * other.speed;
-    paddleBounceSFX.play();
+    
   }
 }
 
@@ -232,9 +233,9 @@ function drawScene(whichScene) {
     case sceneState.INTRO:
       background(0);
       fill(255);
-      textSize(80);
+      textSize(50);
       textAlign(CENTER, CENTER);
-      text("welcome to the\nLEVEL UP PONG\n\"game\"", width/2, height/2);
+      text("welcome to PONG game", width/2, height/2);
       textSize(30);
       text("Pressed any key to continue..",width/2,400);
       text("Try to get 10 point higher than other player!",width/2,300)

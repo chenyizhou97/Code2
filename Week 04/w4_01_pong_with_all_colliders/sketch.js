@@ -23,14 +23,12 @@ var sceneState = {
   LEVEL8: 8,
   LEVEL9: 9,
   LEVEL10: 10,
-  WIN: 10,
+  WIN: 11,
 };
 var keyOn = false;
 var currentState = sceneState.INTRO;
 
-// function preload() {
 
-// }
 
 function centerCanvas() {
   var x = (windowWidth - width) / 2;
@@ -43,8 +41,7 @@ function windowResized() {
 }
 
 function setup() {
-  // paddleBounceSFX = loadSound('assets/ballCollide.mp3', function() { console.log("loaded"); });
-  // hitColliderSFX = loadSound('assets/hitCollider.mp3', function() { console.log("loaded"); });
+
   cnv = createCanvas(900, 500);
   centerCanvas();
   ball = new Ball();
@@ -273,37 +270,8 @@ function drawScene(whichScene) {
       }
       break;
 
-    case sceneState.LEVEL2:
-       colliders.push(new Bryan());
-       break;
-    case sceneState.LEVEL3:
-       colliders.push(new Yizhou());
-       break;
-    case sceneState.LEVEL4:
-       colliders.push(new Ellie());
-       break;
-    case sceneState.LEVEL5:
-       colliders.push(new Yanwen());
-       break;
-    case sceneState.LEVEL6:
-        colliders.push(new MaddyRed());
-        colliders.push(new MaddyGreen());
-        colliders.push(new MaddyBlue());
-       break;
-    case sceneState.LEVEL7:
-       colliders.push(new AlyssaForrest());
-       break;
-    case sceneState.LEVEL8:
-       colliders.push(new Sarah());
-       break;
-    case sceneState.LEVEL9:
-       colliders.push(new Jackie());
-       break;
-    case sceneState.LEVEL10:
-       colliders.push(new Cat());
-       break;
-    case sceneState.WIN
-      background(0);
+    case sceneState.WIN:
+      background();
       drawField();
       if(p1Score>p2Score){
         fill(255);
@@ -480,22 +448,33 @@ function setUpScene(whichScene) {
     case sceneState.LEVEL1:
       break;
     case sceneState.LEVEL2:
+    colliders.push(new Bryan());
       break;
     case sceneState.LEVEL3:
+    colliders.push(new Yizhou());
       break;
     case sceneState.LEVEL4:
+    colliders.push(new Ellie());
       break;
     case sceneState.LEVEL5:
+    colliders.push(new Yanwen());
       break;
     case sceneState.LEVEL6:
+            colliders.push(new MaddyRed());
+        colliders.push(new MaddyGreen());
+        colliders.push(new MaddyBlue());
       break;
     case sceneState.LEVEL7:
+    colliders.push(new AlyssaForrest());
       break;
     case sceneState.LEVEL8:
+    colliders.push(new Sarah());
       break;
     case sceneState.LEVEL9:
+    colliders.push(new Jackie());
       break;
     case sceneState.LEVEL10:
+    colliders.push(new Cat());
       break;
     case sceneState.WIN:
       break;

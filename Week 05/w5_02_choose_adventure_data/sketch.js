@@ -40,11 +40,19 @@ function draw() {
 
 function CreateScenesFromData(data) {
   for (var i = 0; i < data.length; i++) {
-    scenes.push(new Scene(data[i].sceneText, data[i].options, data[i].nextScenes))
+    scenes.push(new 
+    	Scene(data[i].sceneText, 
+    		  data[i].options, 
+    		  data[i].nextScenes,
+    		  data[i].x, 
+    		  data[i].y, 
+    		  data[i].r, 
+    		  data[i].g, 
+    		  data[i].b))
   }
 }
 
-function Scene(sceneText, options, nextScenes) {
+function Scene(sceneText, options, nextScenes,x,y,r ,g, b) {
   this.sceneText = sceneText;
   this.options = options;
   this.nextScenes = nextScenes;

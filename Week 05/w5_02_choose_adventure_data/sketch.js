@@ -1,19 +1,3 @@
-// code 2
-// section a
-// bfa dt
-// spring 2018
-// bryan ma
-
-// week 5
-// choose your own adventure data
-
-// scene data model: 
-
-// {
-//   sceneText: '', //the scene text
-//   options: [], // the text options to choose
-//   nextScenes: []  // the target scene based on the previous options
-// }
 
 var sceneData;
 
@@ -52,7 +36,7 @@ function CreateScenesFromData(data) {
   }
 }
 
-function Scene(sceneText, options, nextScenes,x,y,r ,g, b) {
+function Scene(sceneText, options, nextScenes, x, y, r, g, b) {
   this.sceneText = sceneText;
   this.options = options;
   this.nextScenes = nextScenes;
